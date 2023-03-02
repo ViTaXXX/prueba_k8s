@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-prueba-k8s
+  labels:
+    app: prueba-k8s
+spec:
+  replicas: 
+  selector:
+    matchLabels:
+      app: 
+  template:
+    metadata:
+      labels:
+        app: prueba-pod-k8s
+    spec:
+      containers:
+      - image: 
+        name: contenedor-prueba-k8s
+        ports:
+        - name: 
+          containerPort: 
+        env:
+          - name: 
+            valueFrom:
+              configMapKeyRef:
+                name: 
+                key: 
