@@ -4,13 +4,13 @@ metadata:
   name: ingress-prueba-k8s
 spec:
   rules:
-  - host: 
+  - host: pruebak8s.andres.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: 
+            name: pruebak8s
             port:
               number: 80

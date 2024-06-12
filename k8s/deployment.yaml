@@ -5,24 +5,24 @@ metadata:
   labels:
     app: prueba-k8s
 spec:
-  replicas: 
+  replicas: 1
   selector:
     matchLabels:
-      app: 
+      app: prueba-pod-k8s
   template:
     metadata:
       labels:
         app: prueba-pod-k8s
     spec:
       containers:
-      - image: 
+      - image: andresdocker77/pruebak8s:v1
         name: contenedor-prueba-k8s
         ports:
-        - name: 
-          containerPort: 
+        - name: pruebak8s
+          containerPort: 5002
         env:
-          - name: 
+          - name: NOMBRE
             valueFrom:
               configMapKeyRef:
-                name: 
-                key: 
+                name: cm-prueba-k8s
+                key: dato_nombre

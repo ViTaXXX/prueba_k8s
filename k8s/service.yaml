@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: 
+  name: pruebak8s
 spec:
-  type: 
+  type: NodePort
   ports:
   - name: service-http
-    port: 
-    targetPort: 
+    port: 80
+    targetPort: pruebak8s
   selector:
-    app: 
+    app: prueba-pod-k8s
